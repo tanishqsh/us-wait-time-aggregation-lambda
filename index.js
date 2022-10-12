@@ -302,9 +302,9 @@ function waitTimeDataParser(data, code, country) {
 	let waitTimes = data.split(',');
 
 	let waitTimesObj = {
-		1: waitTimes[0].replace('Days', '').trim(),
-		2: waitTimes[1].replace('Days', '').trim(),
-		3: waitTimes[2].replace('Days', '').trim(),
+		1: waitTimes[0] ? waitTimes[0].replace('Days', '').trim() : 'N/A',
+		2: waitTimes[1] ? waitTimes[1].replace('Days', '').trim() : 'N/A',
+		3: waitTimes[2] ? waitTimes[2].replace('Days', '').trim() : 'N/A',
 	};
 
 	// get the current date and time
